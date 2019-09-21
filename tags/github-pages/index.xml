@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github pages on About</title>
-    <link>http://example.org/tags/github-pages/</link>
+    <link>https://foodtooth.github.io/tags/github-pages/</link>
     <description>Recent content in github pages on About</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 20 Sep 2019 04:55:16 -0400</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://foodtooth.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Create personal site using Github Pages with Jekyll in 2019</title>
-      <link>http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</link>
+      <link>https://foodtooth.github.io/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</link>
       <pubDate>Fri, 20 Sep 2019 04:55:16 -0400</pubDate>
       
-      <guid>http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</guid>
+      <guid>https://foodtooth.github.io/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</guid>
       <description>This tutorial uses User and Organization Pages for general usage personal site
 Create github pages repo Follow instructions from GitHub Pages, to create a user site repo (Remember to initialize it with a README.md file). Here we use my own repo foodtooth.github.io for simplicity.
 Generate default jekyll site  Install Jekyll. Refer to jekyll installation doc git clone https://github.com/foodtooth/foodtooth.github.io jekyll new --force foodtooth.github.io cd foodtooth.github.io Follow instructions in Gemfile to enable gem &amp;quot;github-pages&amp;quot;</description>
