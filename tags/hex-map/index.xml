@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hex map on About</title>
+    <link>http://example.org/tags/hex-map/</link>
+    <description>Recent content in hex map on About</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 20 Sep 2019 05:02:58 -0400</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/hex-map/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A problem about distance between two grids in a hex map</title>
+      <link>http://example.org/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</link>
+      <pubDate>Fri, 20 Sep 2019 05:02:58 -0400</pubDate>
+      
+      <guid>http://example.org/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</guid>
+      <description>题目是 如下图所示的Hex map中 求任意两个数字的grid之间的最短距离 读题意 题中Hex map的特点是 格中数字呈spiral ring方式递增 g</description>
+    </item>
+    
+  </channel>
+</rss>

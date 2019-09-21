@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="foodtooth">
+    <meta name="description" content="foodtooth&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Create personal site using Github Pages with Jekyll in 2019"/>
+<meta name="twitter:description" content="A simple way to start personal blogging, using Jekyll and GitHub Pages."/>
+
+    <meta property="og:title" content="Create personal site using Github Pages with Jekyll in 2019" />
+<meta property="og:description" content="A simple way to start personal blogging, using Jekyll and GitHub Pages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/" />
+<meta property="article:published_time" content="2019-09-20T04:55:16-04:00" />
+<meta property="article:modified_time" content="2019-09-20T04:55:16-04:00" />
+
+
+    
+      <base href="http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/">
+    
+    <title>
+  Create personal site using Github Pages with Jekyll in 2019 · About
+</title>
+
+    
+      <link rel="canonical" href="http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://example.org/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="http://example.org/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://example.org/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://example.org/">
+      About
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://example.org/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://example.org/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Create personal site using Github Pages with Jekyll in 2019</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-09-20T04:55:16-04:00'>
+                September 20, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              One minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://example.org/categories/static-site/">static site</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://example.org/tags/jekyll/">jekyll</a>
+      <span class="separator">•</span>
+    <a href="http://example.org/tags/github-pages/">github pages</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<p><img src="https://i.imgur.com/SlmRvNI.png" alt="Don't be shy" /></p>
+
+<p>This tutorial uses <code>User and Organization Pages</code> for general usage personal site</p>
+
+<h2 id="create-github-pages-repo">Create github pages repo</h2>
+
+<p>Follow instructions from <a href="https://pages.github.com/">GitHub Pages</a>, to create a user site repo (Remember to initialize it with a <code>README.md</code> file). Here we use my own repo <a href="https://github.com/foodtooth/foodtooth.github.io">foodtooth.github.io</a> for simplicity.</p>
+
+<h2 id="generate-default-jekyll-site">Generate default jekyll site</h2>
+
+<ol>
+<li>Install Jekyll. Refer to <a href="https://jekyllrb.com/docs/installation">jekyll installation doc</a></li>
+
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/foodtooth/foodtooth.github.io
+jekyll new --force foodtooth.github.io
+cd foodtooth.github.io</code></pre></div></li>
+
+<li><p>Follow instructions in <code>Gemfile</code> to enable <code>gem &quot;github-pages&quot;</code></p></li>
+
+<li><p><code>bundle update</code></p></li>
+
+<li><p>Copy the content of <a href="https://www.gitignore.io/api/vim,git,linux,jekyll,eclipse,sublimetext">this gitignore</a> to <code>.gitignore</code> file</p></li>
+
+<li><p><code>bundle exec jekyll serve</code> to start jekyll on local</p></li>
+</ol>
+
+<p>Now, you are running a default jekyll site on local. Feel free to do the editing and push the repo to github when you are ready.</p>
+
+<h2 id="further-instructions">Further instructions</h2>
+
+<p>If you hesitate about choosing the right theme to use, pick <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes</a>. Beautiful and simple looking, detailed and nice <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">documentation</a>. After walking through the documentation and doing some editings, your personal blog is good to go.</p>
+
+<p><img src="https://i.imgur.com/faQfm3L.jpg" alt="Show off" /></p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "foodtooths-site" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Hi there, I'm footer.</p>
+    
+     © 2019
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

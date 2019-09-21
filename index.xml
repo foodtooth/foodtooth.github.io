@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About</title>
+    <link>http://example.org/</link>
+    <description>Recent content on About</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 20 Sep 2019 05:02:58 -0400</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A problem about distance between two grids in a hex map</title>
+      <link>http://example.org/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</link>
+      <pubDate>Fri, 20 Sep 2019 05:02:58 -0400</pubDate>
+      
+      <guid>http://example.org/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</guid>
+      <description>题目是 如下图所示的Hex map中 求任意两个数字的grid之间的最短距离 读题意 题中Hex map的特点是 格中数字呈spiral ring方式递增 g</description>
+    </item>
+    
+    <item>
+      <title>Create personal site using Github Pages with Jekyll in 2019</title>
+      <link>http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</link>
+      <pubDate>Fri, 20 Sep 2019 04:55:16 -0400</pubDate>
+      
+      <guid>http://example.org/posts/2019-02-13-create-personal-site-using-github-pages-with-jekyll-in-2019/</guid>
+      <description>This tutorial uses User and Organization Pages for general usage personal site
+Create github pages repo Follow instructions from GitHub Pages, to create a user site repo (Remember to initialize it with a README.md file). Here we use my own repo foodtooth.github.io for simplicity.
+Generate default jekyll site  Install Jekyll. Refer to jekyll installation doc git clone https://github.com/foodtooth/foodtooth.github.io jekyll new --force foodtooth.github.io cd foodtooth.github.io Follow instructions in Gemfile to enable gem &amp;quot;github-pages&amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>
