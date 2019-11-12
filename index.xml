@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About</title>
+    <title>foodtooth</title>
     <link>https://foodtooth.github.io/</link>
-    <description>Recent content on About</description>
+    <description>Recent content on foodtooth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 20 Sep 2019 05:02:58 -0400</lastBuildDate>
@@ -29,6 +29,15 @@
       <description>This tutorial uses User and Organization Pages for general usage personal site
 Create github pages repo Follow instructions from GitHub Pages, to create a user site repo (Remember to initialize it with a README.md file). Here we use my own repo foodtooth.github.io for simplicity.
 Generate default jekyll site  Install Jekyll. Refer to jekyll installation doc git clone https://github.com/foodtooth/foodtooth.github.io jekyll new --force foodtooth.github.io cd foodtooth.github.io Follow instructions in Gemfile to enable gem &amp;quot;github-pages&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://foodtooth.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://foodtooth.github.io/about/</guid>
+      <description>Hugo is a static site engine written in Go.</description>
     </item>
     
   </channel>
