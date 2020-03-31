@@ -6,19 +6,10 @@
     <description>Recent content in Posts on foodtooth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Sep 2019 05:02:58 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 04:55:16 -0400</lastBuildDate>
     
 	<atom:link href="https://foodtooth.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>A problem about distance between two grids in a hex map</title>
-      <link>https://foodtooth.github.io/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</link>
-      <pubDate>Fri, 20 Sep 2019 05:02:58 -0400</pubDate>
-      
-      <guid>https://foodtooth.github.io/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/</guid>
-      <description>题目是 如下图所示的Hex map中 求任意两个数字的grid之间的最短距离 读题意 题中Hex map的特点是 格中数字呈spiral ring方式递增 g</description>
-    </item>
     
     <item>
       <title>Create personal site using Github Pages with Jekyll in 2019</title>

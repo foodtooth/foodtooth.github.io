@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="foodtooth">
+    <meta name="description" content="foodtooth&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A problem about distance between two grids in a hex map"/>
+<meta name="twitter:description" content="题目是 如下图所示的Hex map中 求任意两个数字的grid之间的最短距离 读题意 题中Hex map的特点是 格中数字呈spiral ring方式递增 g"/>
+
+    <meta property="og:title" content="A problem about distance between two grids in a hex map" />
+<meta property="og:description" content="题目是 如下图所示的Hex map中 求任意两个数字的grid之间的最短距离 读题意 题中Hex map的特点是 格中数字呈spiral ring方式递增 g" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foodtooth.github.io/zh-cn/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/" />
+<meta property="article:published_time" content="2019-09-20T05:02:58-04:00" />
+<meta property="article:modified_time" content="2019-09-20T05:02:58-04:00" />
+
+
+    
+      <base href="https://foodtooth.github.io/zh-cn/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/">
+    
+    <title>
+  A problem about distance between two grids in a hex map · foodtooth
+</title>
+
+    
+      <link rel="canonical" href="https://foodtooth.github.io/zh-cn/posts/2019-02-16-a-problem-about-distance-between-two-grids-in-a-hex-map/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://foodtooth.github.io/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://foodtooth.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://foodtooth.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://foodtooth.github.io/zh-cn">
+      foodtooth
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://foodtooth.github.io/zh-cn/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://foodtooth.github.io/zh-cn/posts/">博客</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://foodtooth.github.io/zh-cn/projects/">项目</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://foodtooth.github.io/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">A problem about distance between two grids in a hex map</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-09-20T05:02:58-04:00'>
+                September 20, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1 分钟阅读时间
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://foodtooth.github.io/zh-cn/tags/hexagon/">hexagon</a>
+      <span class="separator">•</span>
+    <a href="https://foodtooth.github.io/zh-cn/tags/hex-map/">hex map</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        
+
+<h2 id="题目是">题目是</h2>
+
+<p>如下图所示的Hex map中</p>
+
+<p><img src="https://i.imgur.com/IG2lwOG.jpg" alt="Problem description" /></p>
+
+<p>求任意两个数字的grid之间的最短距离</p>
+
+<h2 id="读题意">读题意</h2>
+
+<p>题中Hex map的特点是</p>
+
+<ol>
+<li>格中数字呈spiral ring方式递增</li>
+<li>grid放置呈flat形式</li>
+</ol>
+
+<p>Hex map本身特点有</p>
+
+<ol>
+<li>到所有相邻grid距离相等</li>
+</ol>
+
+<h2 id="思路是">思路是</h2>
+
+<p>利用Hex map的坐标系统。但是题中数字不是坐标系统的规律，所以要在进行对应后，再使用坐标系统的规范方法</p>
+
+<ol>
+<li>坐标系统选用Cube coordinates，便于理解</li>
+<li>距离计算选用适用其变种的Axial coordinates的方式</li>
+<li>此坐标系下</li>
+</ol>
+
+<blockquote>
+<p>distance is derived from the Mahattan distance on cubes</p>
+</blockquote>
+
+<h2 id="code">Code</h2>
+
+<iframe height="400px" width="100%" src="https://repl.it/@foodtooth/LightyellowHumbleDisassembler?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>With some memos:</p>
+
+<p><img src="https://i.imgur.com/8kQN0AA.jpg" alt="Simple memo" /></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "foodtooths-site" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>底线之上</p>
+    
+    
+      
+        © 2020
+      
+       foodtooth 
+    
+    
+       · 
+      技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>

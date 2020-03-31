@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life on foodtooth</title>
+    <link>https://foodtooth.github.io/zh-cn/tags/life/</link>
+    <description>Recent content in life on foodtooth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Mar 2020 10:14:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://foodtooth.github.io/zh-cn/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>这个2020</title>
+      <link>https://foodtooth.github.io/zh-cn/posts/2020-03-31-%E8%BF%99%E4%B8%AA2020/</link>
+      <pubDate>Tue, 31 Mar 2020 10:14:19 +0800</pubDate>
+      
+      <guid>https://foodtooth.github.io/zh-cn/posts/2020-03-31-%E8%BF%99%E4%B8%AA2020/</guid>
+      <description>新冠肺炎 年初3号的时候在网上看到肺炎的消息，开始担心春运会把问题扩大到没法儿收拾。家人，孩子，父母都会身处潜在危险中，心急却也做不了什么太多</description>
+    </item>
+    
+  </channel>
+</rss>
